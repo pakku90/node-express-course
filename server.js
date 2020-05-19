@@ -28,6 +28,13 @@ app.get('/users/:id',function(req,res){
 	})
 })
 
+app.get('/info', (req, res) => {
+    res.json({
+        status: 'success',
+        info: 'node learning'
+    });
+});
+
 app.post('/login',function(req,res){
     const username=req.body.username;
     const password=req.body.password;
